@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/script.js">
+<!--        可以将js代码编写到外部js文件中
+            可以在不同页面中引用
+    script标签一旦用于引入外部文件了就不能在编写代码了 即使编写了 浏览器也会忽略
+    如果需要可以船舰一个新的script
+-->
+<!--        可以将js代码写入script标签中-->
+
+    </script>
+</head>
+<body>
+<!--可以将js代码编写到标签的onclick属性中-->
+    <button onclick="alert('123')">点我一下</button>
+<!--可以将js代码写在超链接的href属性中 这样当点击超链接时 h会执行js-->
+<a href="javascript:alert('123')">123</a>
+</body>
+</html>
