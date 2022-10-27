@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+
+    function hello(o){
+      alert(o.name)
+    }
+
+    var obj = {name:"dwda"}
+
+    /*
+    * 实参可以是个对象 也可以是个函数
+    * */
+    function fun(a){
+      console.log(a)
+      a(obj)
+    }
+    fun(hello)
+    fun(function (){alert("wqe")})
+
+    /*
+    *hello() 调用函数 相当于使用了函数的返回值
+    * hello 函数对象 相当于使用函数对象
+    * */
+  </script>
+</head>
+<body>
+
+</body>
+</html>

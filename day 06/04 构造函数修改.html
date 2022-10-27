@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * 构造函数没执行一次就会创建一个新的sayhellp方法
+    * 也就是所有的实例的sayhellp都是唯一的
+    * 这样就导致了构造函数执行一次就会创建一个新的方法
+    *  我们完全可以是所有的对象共享同一个方法
+    *
+    *
+    *   将函数定义在全局作用域，污染了全局作用域的命名空间
+    *   而且定义在全局作用域中很不安全
+    * */
+    function Person(name){
+      this.name = name
+      //向对象中添加一个方法
+      this.sayhellp = fun
+    }
+    function fun(){
+      console.log("123")
+    }
+    var per = new Person("213")
+  </script>
+</head>
+<body>
+
+</body>
+</html>

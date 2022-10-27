@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+  var obj = {
+    name:"123",
+    age:12,
+    sayname:function (){}
+  }
+
+  /*
+  * 使用工厂方法创建对象
+  * */
+function fun(name){
+  //创建一个新对象
+  var obj = new Object();
+  //向对象中添加属性
+  obj.name = name
+  return obj
+}
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    /*
+    *  引用数据类型
+    *   Object
+    *
+    * JS中的变量都是保存到栈内存中的
+    *   基本数据类型的值直接在栈内存中存储
+    *   值与值之间是独立存在的，修改一个变量不会影响其他的变量
+    *
+    *   对象是保存在堆内存中的，每创建一个新的对象 就会在对内存中开辟出一个新的空间
+    *   而变量保存的是对象的内存地址(对象引用) 如果两个变量保存的是同一个对象引用 当一个通过一个变量修改时 另一个也会受影响
+    * */
+    var obj = new Object()
+    obj.name = "213"
+
+    var obj2 = obj
+  </script>
+</head>
+<body>
+
+</body>
+</html>

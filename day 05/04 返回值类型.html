@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+function fun(){
+  for(var i=0;i<5;i++){
+    if(i==2){
+      // break 相当于退出当前循环
+      // continue 相当于跳过本次循环
+      return; //结束整个函数
+    }
+
+  }
+}
+/*
+* 返回值可以是任意数据
+* 也可以是一个对象 也可以是个函数
+* */
+  function fun2(){
+    return {name:"123"}
+  }
+  var a = fun2()
+
+
+function fun3(){
+    function fun4(){
+      alert("123")
+    }
+    //返回
+    return fun4
+}
+
+a = fun3()
+a()
+fun3()()
+  </script>
+</head>
+<body>
+
+</body>
+</html>

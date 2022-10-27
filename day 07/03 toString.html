@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+    function Person(name){
+      this.name = name
+    }
+
+    //修改person原型toString
+    Person.prototype.toString = function (){
+      return "1231"+this.name
+    }
+
+    var per = new Person("sda")
+    //当我们在页面中直接打印一个对象时，实际上是输出对象的toString()方法的返回值
+    //如果我们希望在输出对象不输出[object,object]，可以为对象添加一个toString()方法
+/*    per.toString = function (){
+
+      return "123"+this.name
+    }*/
+    console.log(per.toString())
+    console.log(per)
+    console.log(per.__proto__.__proto__.hasOwnProperty("toString"))//true
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

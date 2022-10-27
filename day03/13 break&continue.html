@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    /*
+    *  break用来退出switch或循环语句
+    *   不能在if语句中使用break或continue
+    *
+    *   break会立即种植离他最近的循环语句
+    *
+    *
+    * 可以为循环语句创建一个label 来识别当前的循环
+    * label:循环语句
+    * 使用break语句，可在break后跟着一个label
+    * 这样break将会结束指定的循环 而不是最近的
+    * */
+    hell0:
+    for(var i=0;i<10;i++){
+        for(var j=0;j<10;j++){
+            break hell0
+        }
+    }
+
+    /*
+    * continue可以跳过当此循环
+    *
+    * */
+
+    qwe:
+        for(var i=0;i<10;i++){
+            for(var j=0;j<10;j++){
+                continue qwe
+            }
+        }
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

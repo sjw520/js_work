@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    /*
+    * 在JS中一共由两个作用域
+    *   1. 全局作用域
+    *       直接写在script标签中的js代码 都在全局作用域
+    *       全局作用域在页面打开的时候创建 在页面关闭时销毁
+    *       在全局作用域中有一个全局对象window 我们可以直接调用 代表浏览器的窗口 由浏览器创建
+    *         在全局作用域中 创建的变量都会作为window对象的属性保存
+    *           创建的函数都会作为window对象的方法保存
+    *
+    *       全局作用域中的变量都是全局变量 在页面的任何部分都可以访问到
+    *   2. 函数作用域
+    *        调用函数时创建函数作用域 函数执行完毕后函数作用域销毁
+    *          每调用一次函数就会创建一个新的函数作用域
+    *           在函数作用域中可以访问到全局作用域的变量
+    *           在全局不能访问函数作用域
+    *       当函数作用域操作一个变量时 他会现在自身作用域中寻找 如果有直接调用  如果没有则向上一级寻找
+    *       在函数访问全局变量可以使用window
+    * */
+    var a = 10
+    console.log(window.a)
+
+    function fun(){
+
+    }
+    window.fun()
+
+    function fun(){
+        var a =  123;
+        console.log(a)
+        console.log(window.a)
+
+    }
+
+    /*
+    在函数中 不使用var声明的变量都会称为全局变量
+    * */
+    function fun5(){
+        c =10
+    }
+    console.log(c)
+
+    /*
+    * 定义形参就像但与在函数作用域中声明了变量
+    * */
+    function fun1(e){
+
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
