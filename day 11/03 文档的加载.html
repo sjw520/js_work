@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        * 浏览器加载页面时 是按照自上向下的顺序加载的
+        * 读取到一行 就运行一行 如果将script标签写在页面上边
+        * 在代码执行时页面还没有加载 页面没有加载 dom对象也没有加载
+        *
+        * 将js代码编写到页面的西面就是为了 可以在页面加载完毕叶猴在执行js代码
+        * */
+
+        /*
+        * onload事件会在整个页面加载完成之后才触发
+        * 为window绑定一个onload事件
+        *   该事件对应的响应函数将会在页面加载完成之后执行
+        *   这样可以确保我们的代码执行时所有的DOM对象已经加载完毕
+        * */
+
+        //innerHTML通过这个属性可以获取到元素内部的html代码 对于自结束没有意义
+        window.onload = function () {
+            var btn = document.getElementById("btn")
+            btn.onclick = function () {
+                alert("sad")
+            }
+        }
+
+        /*
+        * getElementByTagName
+        *   根据标签名来获取一组元素节点对象
+        *   这个方法会给我们返回一个类数组对象 所有查询到的元素都会封装到对象中
+        *   即使查询到元素只有一个 他也会封装到数组中
+        * */
+
+        /*
+        * getElementsByName
+        * 根据那么属性获取一组元素节点对象
+        * 如果需要读取元素节点属性 直接使用元素.属性名
+        *   class属性不能采用这种方式 读取class属性时需要使用 元素.className
+        * */
+    </script>
+</head>
+<body>
+  <button id="btn">button</button>
+
+</body>
+</html>

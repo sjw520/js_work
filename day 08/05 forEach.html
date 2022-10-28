@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * forEach()
+    * 这个方法只支持IE8以上的历览器
+    * */
+  var arr = ["dwad","awdwa","wdad"]
+    /*
+    * foreach()方法需要一个函数作为参数
+    * 像这样的函数 由我们创建但是不由我们调用的 我们称为回调函数
+    *   数组中由几个元素函数就会执行几次 再次执行时 浏览器会将遍历到的元素 以实参的形式传递进来 我们可以定义形参来读取这些内容
+    *
+    *  浏览器会在回调函数中传递三个参数
+    *     第一个参数 就是当前正在遍历的元素
+    *     第二个参数 当前正在遍历元素的索引
+    *     第三个参数 就是正在遍历的数组
+    * */
+
+    arr.forEach(function (value, index, array) {
+      console.log(value)
+    })
+  </script>
+</head>
+<body>
+
+</body>
+</html>

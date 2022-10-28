@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    /*
+    * 使用字面量创建正则表达式
+    *   语法：var 变量 = /正则表达式/匹配模式
+    * */
+
+    var reg = /a/i
+
+    //创建一个正则表达式 检查一个字符串是否由a b c
+    /*
+    * 使用|表示或者的意思
+    * */
+    reg = /a|b|c/i
+
+    /*
+    * 创建一个正则表达式检查字符串中是否含有字母
+    * []里的内容也是或的关系
+    * [ab]==a|b
+    * [a-b] 任意小写字母
+    * [A-z] 任意字母
+    * [0-9] 任意数字
+    * */
+    reg = /[a-z]/
+
+    /*
+    *  检查一个字符串中是否含有abc 或adc
+    * */
+    reg = /a[bde]c/
+
+    /*
+    * [^ ]除了
+    * */
+    reg = /[^ab]/
+    reg = /[^0-9]/
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
