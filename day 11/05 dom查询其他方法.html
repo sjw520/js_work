@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    window.onload = function (){
+      // var body = document.getElementsByTagName('body')[0]
+
+      /*
+      * 在document中有一个属性body 他保存的就是body引用
+      * */
+      var body = document.body;
+
+      //保存的是html跟标签
+      var html = document.documentElement
+
+      //代表页面中所有的元素
+      document.all
+
+    }
+    /*
+    * 根据元素的class属性值获取一组元素节点对象
+    * */
+      document.getElementsByClassName("box1")
+
+    //获取页面中所有的div
+    document.getElementsByTagName("div")
+
+    //获取box1中的div
+    /*
+    * document.querySelector()
+    *   需要一个选择器的字符串作文参数，可以根据一个css选择器来查询一个元素节点对象
+    *   使用该方法总会返回唯一的一个元素 如果满足条件有多个  那么它只会返回第一个元素
+    * */
+    document.querySelector(".box1 div")
+
+
+    /*
+    * 该方法和queryselector()用法类似 不同的是它会将符合条件的元素封装到一个数组中返回
+    * 即使符合条件的元素只有一个也会返回数组
+    * */
+    document.querySelectorAll(".box1")
+  </script>
+</head>
+<body>
+<div class="box1">
+  <div></div>
+</div>
+</body>
+</html>

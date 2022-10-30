@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    window.onload = function () {
+      var city = document.getElementById("city")
+      //获取city下所有的li节点
+      var r = city.getElementsByTagName("li")
+      console.log(r)
+      //返回cit的所有子节点
+      /*
+      * childNodes属性会获取包括文本节点在内的所有节点
+      * 根据DOM标签标签间空白也会当成文本节点
+      * */
+
+      console.log(city.childNodes)
+
+
+      /*
+      *children属性可以获取当前元素的所有子元素
+      * */
+      console.log(city.children)
+
+      //firstchild可以获取当前元素的第一个子节点 包括空白文本节点
+      city.firstChild
+
+      //获取当前元素的第一个子元素
+      city.firstElementChild
+
+
+      /*
+      * 定义个函数 专门用来指定元素绑定单机响应时间函数
+      *  参数：
+      *     str 要绑定单机响应函数的对象的id属性值
+      *     fun 事件的回调函数 当单机元素hi 该函数会被触发
+      * */
+
+      function  myClick(str,fun){
+        var btn = document.getElementById(str)
+        btn.onclick = fun
+      }
+
+      var bj = document.getElementById("bj")
+
+
+      //返回bj的父节点
+      bj.parentNode;
+
+      /*
+      * innerText
+      *   该属性可以获取到元素内部的文本内容
+      *   它和innerHTML类似 不同的是他会自动将html去除
+      * */
+
+
+      //返回bj的前一个兄弟节点 也可能获取到空白文本
+      bj.previousSibling
+
+      //获取前一个兄弟元素
+      bj.previousElementSibling
+      //获取id为bj的元素
+      console.log(bj.innerHTML)
+
+      var username = document.getElementById("username")
+      //读取文本框的属性值
+      username.value
+      //设置id为username的value属性值
+      username.value = "dwda"
+
+    }
+
+
+
+  </script>
+</head>
+<body>
+  <ul id="city">
+    <li>qe</li>
+    <li id="bj">qwe</li>
+    <li>wqe</li>
+    <li>qw</li>
+  </ul>
+
+<div class="inner">
+  <input type="text" id="username" value="asd">
+</div>
+</body>
+</html>
