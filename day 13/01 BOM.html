@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+  /*
+  * BOM
+  *   浏览器对象模型
+  *   BOM可以使我们通过js操作浏览器
+  *   在BOM中为我们提供了一组对象，用来完成对浏览器的操作
+  *   BOM对象
+  *     window
+  *       代表整个浏览器的窗口 同时window也是网页中的全局对象
+  *     Navigator
+  *       代表当前浏览器的信息 通过这个对象可以来识别不同的浏览器
+  *     Location
+  *       代表当前浏览器的地址栏 通过location可以获取浏览器地址栏信息 或者操作浏览器跳转页面
+  *     History
+  *       代表浏览器的历史记录 可以通过该对象来操作浏览器的历史记录
+  *       由于隐私的原因 该对象不能获取到具体的历史记录 只能操作浏览器向前或向后翻页
+  *       而且操作只在当次访问有效
+  *     Screen
+  *       代表用户的屏幕信息 通过该对象可以获取到用户的显示器相关信息
+  *
+  *
+  *   这些BOM对象在对象在浏览器中都是作为window对象的属性保存
+  *     可以通过window对象来使用 也可以直接使用
+  *     一般我们只会使用userAgent来判断浏览器的信息
+  *       userAgent是一个字符串 这个字符串中包含有用来描述浏览器信息的内容
+  *       不同的浏览器会有不同的userAgent
+  * */
+console.log(navigator.userAgent)
+  alert(navigator.appName)
+
+  /*
+  * 如果通过UserAgent不能判断 还可以通过一些浏览器中特有的对象 来判断浏览器的信息
+  * 比如 activeXObject
+  * */
+  </script>
+</head>
+<body>
+
+</body>
+</html>
